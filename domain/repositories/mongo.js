@@ -1,8 +1,6 @@
 const mongoose = require('mongoose');
 const user = require('../entities/user');
 
-mongoose.set('useFindAndModify', false);
-
 let arrayConns = [], db = {};
 
 if (process.env.MONGODB_URI && process.env.MONGODB_URI > 0) {

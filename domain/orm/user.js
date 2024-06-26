@@ -18,7 +18,7 @@ exports.Store = async ( username, email, password ) =>{
 
 exports.findUser = async (username) => {
     try{
-        return await conn.db.connMongo.User.findOne({ username});
+        return await conn.db.connMongo.User.findOne({username});
     }catch(err){
         console.log(" err orm-user.GetById = ", err);
         return err

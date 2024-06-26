@@ -1,5 +1,5 @@
 const ormUser = require('../orm/user');
-const { responseHandler } = require('../../utils')
+const { responseHandler } = require('../../utils/responseHandler')
 
 exports.Store = async (req, res) =>{
     try{
@@ -16,7 +16,7 @@ exports.Store = async (req, res) =>{
             }
         }else{
             return responseHandler(res, {
-                type: error,
+                type: "error",
                 message: "internal server error",
               });
         }
@@ -26,6 +26,9 @@ exports.Store = async (req, res) =>{
           });
     } catch(err) {
         console.log("err = ", err);
-        return res.status(500).send({err: "internal database error"});
+        return responseHandler(res, {
+            type: "error",
+            message: err,
+          });
     }
 }

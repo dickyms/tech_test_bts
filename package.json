@@ -1,0 +1,25 @@
+{
+  "name": "tech_test_bts",
+  "version": "1.0.0",
+  "description": "technical test bts.id",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dickyms/tech_test_bts.git"
+  },
+  "author": "dickyms",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dickyms/tech_test_bts/issues"
+  },
+  "homepage": "https://github.com/dickyms/tech_test_bts#readme",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.19.2",
+    "helmet": "^7.1.0",
+    "mongoose": "^8.4.4"
+  }
+}

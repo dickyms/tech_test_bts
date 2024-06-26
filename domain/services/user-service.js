@@ -11,15 +11,19 @@ exports.Store = async (req, res) =>{
             if(respOrm.err){
                 return responseHandler(res, {
                     type: "validation",
-                    message: "user has been assigned as admin.",
+                    message: "error",
                   });
             }
         }else{
-            code = 500
+            return responseHandler(res, {
+                type: error,
+                message: "internal server error",
+              });
         }
-        return res.status(code).send({
-            msg: "success"
-        });
+        return responseHandler(res, {
+            type: "success",
+            message: respOrm,
+          });
     } catch(err) {
         console.log("err = ", err);
         return res.status(500).send({err: "internal database error"});

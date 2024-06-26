@@ -12,7 +12,7 @@ exports.Store = async ( username, email, password ) =>{
         return true
     }catch(err){
         console.log(" err orm-user.Store = ", err);
-        return await {err:{code: 123, messsage: err}}
+        return err
     }
 }
 
